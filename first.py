@@ -1,3 +1,65 @@
+# 汉诺塔
+def move(n, a, b, c):
+    if n == 1:
+        print(a, '-->', c)
+        return
+    move(n - 1, a, c, b)
+    print(a, '-->', c)
+    move(n - 1, b, a, c)
+
+
+# move(4, 'A', 'B', 'C')
+
+# 默认参数
+def greet(a='world'):
+    print("Hello," + a + '.')
+
+
+# greet()
+# greet('Bart')
+
+# 可变参数
+def average(*args):
+    sum = 0.0
+    if len(args) == 0:
+        return 0.0
+    for x in args:
+        sum = sum + x
+    return sum / len(args)
+
+
+# print(average())
+# print(average(1, 2))
+# print(average(1, 2, 2, 3, 4))
+
+# 对list进行切片
+L = range(1, 101)
+# L = L[:]
+# print(L[0:10])
+# print(L[2::3])
+# print(L[4:50:5])
+
+# 倒序切片
+# 记住倒数第一个元素的索引是-1。倒序切片包含起始索引，不包含结束索引。
+L = range(1, 101)
+
+
+# print(L[-10:])
+# print(L[-46::5])
+# for x in L[-46::5]:
+#     print(x)
+
+
+# 对字符串切片
+def firstCharUpper(s):
+    return s[0].upper() + s[1:]
+
+
+print(firstCharUpper('hello'))
+print(firstCharUpper('sunday'))
+print(firstCharUpper('september'))
+
+
 # 迭代
 def iteration():
     for i in range(1, 101):
