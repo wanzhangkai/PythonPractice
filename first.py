@@ -64,8 +64,7 @@ def generate_tr(name, score):
 def fun1(l):
     return [x.upper() for x in l if isinstance(x, str)]
 
-
 # print(fun1(["wqe", "qwe", 123]))
 
 # 多层表达式
-print([100 * n1 + 10 * n2 + n3 for n1 in range(1, 10) for n2 in range(0, 10) for n3 in range(0, 10) if n1 == n3])
+# print([100 * n1 + 10 * n2 + n3 for n1 in range(1, 10) for n2 in range(0, 10) for n3 in range(0, 10) if n1 == n3])
